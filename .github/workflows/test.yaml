@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-      - run: yarn ci
+      - run: yarn install --frozen-lockfile
       # run the migration in the test database
       - run: yarn migrate:up
       - run: yarn test
