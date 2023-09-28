@@ -26,7 +26,7 @@
     "test": "jest",
     "postgres:start": "docker-compose up -d",
     "migrate:save": "npx prisma migrate --experimental save",
-    "migrate:up": "npx prisma migrate --experimental up --auto-approve --create-db",
+    "db:migrate": "npx prisma migrate dev",
     "prisma:generate": "npx prisma generate"
   },
   "engines": {

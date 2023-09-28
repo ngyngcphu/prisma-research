@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = "postgresql://prisma:prisma@127.0.0.1:5432/grading-app"
 }
 
 // TODO: define fields and relations
