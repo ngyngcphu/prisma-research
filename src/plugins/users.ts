@@ -1,5 +1,5 @@
 import Hapi from '@hapi/hapi'
-import Joi from '@hapi/joi'
+import Joi from 'joi'
 
 // plugin to instantiate Prisma Client
 const usersPlugin = {
@@ -29,7 +29,7 @@ const usersPlugin = {
                 handler: createUserHandler,
                 options: {
                     validate: {
-                        payload: createUserHandler,
+                        payload: createUserValidator,
                         failAction: (request, h, err) => {
                             // show validation errors to user https://github.com/hapijs/hapi/issues/3706
                             throw err
